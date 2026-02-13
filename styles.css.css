@@ -1,0 +1,147 @@
+/* --- Style général --- */
+body {
+  font-family: 'Press Start 2P', monospace; /* look rétro */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+
+  /* Fond Pokémon */
+  background-image: url('https://wallpapercave.com/wp/wp8797805.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* Overlay pour lisibilité */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* noir adouci */
+  z-index: 0;
+}
+
+/* Titre */
+h1 {
+  font-size: 28px;
+  margin-top: 30px;
+  color: #ffe066; /* jaune rétro */
+  text-shadow: 2px 2px #333;
+  z-index: 1;
+}
+
+/* Champ de recherche */
+label {
+  font-size: 12px;
+  color: #fff;
+  z-index: 1;
+}
+
+#inputPokemon {
+  margin: 10px;
+  padding: 10px 14px;
+  border: 2px solid #b0aebe; /* gris doux */
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f5f5f5;
+  color: #222;
+  text-align: center;
+  outline: none;
+  transition: 0.2s;
+  z-index: 1;
+}
+
+#inputPokemon:focus {
+  border-color: #ffeb3b;
+  box-shadow: 0 0 6px #fff176;
+}
+
+/* --- Carte principale du Pokédex --- */
+#root {
+  margin-top: 25px;
+  width: 360px;
+  min-height: 420px;
+  background: rgba(30, 30, 30, 0.85); /* gris foncé adouci */
+  border: 3px solid #b0aebe; /* gris doux */
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Nom Pokémon */
+#root h2 {
+  background-color: #6c5b7b; /* bordeaux doux */
+  color: #ffe066; /* jaune rétro */
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  text-shadow: 1px 1px #222;
+}
+
+/* Image Pokémon */
+#root img {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #ffe066; /* jaune rétro */
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  padding: 5px;
+  margin-bottom: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+#root img:hover {
+  transform: scale(1.05);
+}
+
+/* Infos Pokémon */
+#root p {
+  background-color: #f0e5d8; /* fond clair pour infos */
+  border: 1px solid #b0aebe;
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: 90%;
+  text-align: center;
+  margin: 6px 0;
+  color: #222;
+  font-size: 12px;
+  line-height: 1.3em;
+}
+
+/* LED rétro Pokédex */
+#root::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 14px;
+  height: 14px;
+  background-color: #00bfa5;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #00bfa5;
+}
+
+#root::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 14px;
+  height: 14px;
+  background-color: #ffeb3b;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #ffeb3b;
+}

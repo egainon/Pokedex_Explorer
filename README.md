@@ -13,3 +13,5 @@ Objectifs pédagogiques Ce projet m’a permis de pratiquer :
 - La recherche dynamique d’informations 
 
 Les données proviennent du fichier JSON officiel : https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json
+
+Stacks : HTML/CSS, JavasCript
